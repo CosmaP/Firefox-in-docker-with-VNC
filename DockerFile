@@ -13,4 +13,4 @@ RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 RUN bash -c 'echo "firefox" >> /.bashrc'
 
 EXPOSE 5900
-CMD    ["x11vnc", "-forever", "-usepw", "-create"]
+CMD    ["x11vnc", "-forever", "-usepw", "-create", "-ncache 10", "-ncache_cr"]
